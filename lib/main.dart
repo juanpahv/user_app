@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:user_app/router/app_router.dart';
 
+void main() {
+  runApp(const MyApp());
+}
+
 class MyApp extends StatefulWidget {
   const MyApp({super.key});
 
