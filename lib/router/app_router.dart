@@ -17,9 +17,12 @@ final appRouter = GoRouter(routes: [
     },
   ),
   GoRoute(
+    name: "profile_screen",
     path: "/profile_screen",
-    builder: (context, state) {
-      return const ProfileScreen();
-    },
+    builder: (context, state) => ProfileScreen(
+      nombre: state.uri.queryParameters['nombre'] ?? '',
+      edad: state.uri.queryParameters['edad'] ?? '',
+      ocupacion: state.uri.queryParameters['ocupacion'] ?? '',
+    )
   )
 ]);
